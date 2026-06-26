@@ -1,0 +1,166 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { profile, summary, stack, projects, experience, credlyProfile } from "../data/content";
+---
+
+<Layout>
+  <!-- ============================================================ HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">$ whoami<span class="cursor"></span></p>
+      <h1>Mohamed <span class="accent">Kout</span></h1>
+      <p class="role">{profile.role}</p>
+      <p class="lede">
+        I build and operate production web platforms <strong>end to end</strong> —
+        from Spring Boot APIs and Angular front ends to the CI/CD pipelines and
+        hardened VPS infrastructure they run on.
+      </p>
+
+      <div class="sysblock" aria-label="summary">
+        <div class="sysblock-bar">
+          <span class="tdot r"></span><span class="tdot y"></span><span class="tdot g"></span>
+          <span style="margin-left:.4rem">mkout@portfolio — summary</span>
+        </div>
+        <div class="sysblock-rows">
+          {summary.map((s) => (
+            <div class="sysrow">
+              <span class="k">{s.k}</span>
+              <span class="v">{s.hl ? <span class="hl">{s.v}</span> : s.v}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#projects">view projects <span class="arrow">→</span></a>
+        <a class="btn" href={`mailto:${profile.email}`}>get in touch <span class="arrow">→</span></a>
+        <a class="btn" href={profile.cvUrl}>download CV <span class="arrow">↓</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================== WHOAMI -->
+  <section class="pane" id="about">
+    <div class="wrap reveal">
+      <p class="pane-label">whoami</p>
+      <div class="prose">
+        <p>
+          I'm a full-stack engineer based in Ariana, Tunisia, with an engineering
+          degree from ESPRIT. At <strong>Sodalite Soft Solutions</strong> I own
+          features from the database schema all the way to the Nginx config in
+          front of them.
+        </p>
+        <p class="tdim">
+          My comfort zone is the part most developers hand off: shipping the thing,
+          then keeping it alive in production. I've rebuilt compromised
+          infrastructure from scratch, hardened it, and put monitoring in front of
+          it — which you'll see reflected in the way I build.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================== STACK -->
+  <section class="pane" id="stack">
+    <div class="wrap reveal">
+      <p class="pane-label">stack --list</p>
+      <div class="stack-grid">
+        {stack.map((g) => (
+          <div class="stack-group">
+            <h3>{g.title}</h3>
+            {g.items.map((it) => (
+              <div class="stack-item">
+                {it.name}<span class="lvl">{it.lvl}</span>
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== PROJECTS -->
+  <section class="pane" id="projects">
+    <div class="wrap reveal">
+      <p class="pane-label">projects --all</p>
+      <div class="proj-list">
+        {projects.map((p) => (
+          <article class="proj">
+            <div class="proj-head">
+              <h3>{p.name}</h3>
+              <span class={`tag ${p.live ? "live" : ""}`}>
+                {p.live ? "● live" : p.tag}
+              </span>
+            </div>
+            <p>{p.blurb}</p>
+            <p style="margin-top:.6rem">{p.detail}</p>
+            <div class="proj-stack">
+              {p.stack.map((s) => <span class="chip">{s}</span>)}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================== CERTIFICATIONS -->
+  <section class="pane" id="certifications">
+    <div class="wrap reveal">
+      <p class="pane-label">certifications --list</p>
+      <div class="cert-grid">
+        <div
+          class="credly-badge-grid"
+          data-iframe-width="100%"
+          data-iframe-height="480"
+          data-iframe-title="Credly certification badges"
+          src={credlyProfile + "/badges"}
+        ></div>
+        <script is:inline async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================== EXPERIENCE -->
+  <section class="pane" id="experience">
+    <div class="wrap reveal">
+      <p class="pane-label">experience --log</p>
+      <div class="exp">
+        {experience.map((e) => (
+          <div class="exp-item">
+            <div class="exp-when">{e.when}</div>
+            <div class="exp-body">
+              <h3>{e.title} <span class="at">@ {e.at}</span></h3>
+              <p>{e.body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= CONTACT -->
+  <section class="pane" id="contact">
+    <div class="wrap reveal">
+      <p class="pane-label">contact --open</p>
+      <div class="prose">
+        <p>
+          Open to full-time roles and freelance work. The fastest way to reach me
+          is email — I reply within a day.
+        </p>
+      </div>
+      <div class="contact-grid">
+        <a class="btn btn-primary" href={`mailto:${profile.email}`}>{profile.email} <span class="arrow">→</span></a>
+        <a class="btn" href={profile.github}>github <span class="arrow">→</span></a>
+        <a class="btn" href={profile.linkedin}>linkedin <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <footer class="foot">
+        <span class="exit">exit 0</span>
+        <span>© {new Date().getFullYear()} {profile.name}</span>
+        <span>built with Astro · deployed on VPS</span>
+      </footer>
+    </div>
+  </section>
+</Layout>

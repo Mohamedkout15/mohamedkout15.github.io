@@ -1,0 +1,60 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Astro generated files
+.astro/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Cache
+.cache/
+
+# TypeScript
+*.tsbuildinfo
+
+# Package manager stores
+.pnpm-store/
+.npm/
+
+# Coverage
+coverage/
+
+# Temporary files
+tmp/
+temp/
+
+# Optional: Netlify
+.netlify/
+
+# Optional: Vercel
+.vercel/
+
+# Optional: Turborepo
+.turbo/

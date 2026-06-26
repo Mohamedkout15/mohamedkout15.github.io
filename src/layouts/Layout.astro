@@ -1,0 +1,85 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = "Mohamed Kout — Full-Stack Engineer",
+  description = "Full-stack engineer (Java/Spring + Angular) and DevSecOps practitioner based in Ariana, Tunisia. I build and operate production web platforms end to end.",
+} = Astro.props;
+
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Fonts: IBM Plex Mono (chrome) + IBM Plex Sans (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- status line: reads like a tmux / neovim status bar -->
+    <header class="statusline">
+      <div class="wrap">
+        <span class="sl-seg"><span class="sl-prompt">mkout</span></span>
+        <span class="sl-seg sl-path">~/portfolio</span>
+        <span class="sl-seg sl-branch"> main</span>
+        <span class="sl-spacer"></span>
+        <span class="sl-seg sl-loc">Ariana, TN</span>
+        <span class="sl-seg sl-clock" id="clock">--:--</span>
+        <span class="sl-seg sl-status"><span class="dot"></span> available</span>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <script>
+      // live clock in the status line (Tunisia time)
+      const clock = document.getElementById("clock");
+      function tick() {
+        if (!clock) return;
+        clock.textContent = new Date().toLocaleTimeString("en-GB", {
+          hour: "2-digit",
+          minute: "2-digit",
+          timeZone: "Africa/Tunis",
+        });
+      }
+      tick();
+      setInterval(tick, 1000 * 15);
+
+      // scroll reveal (respects reduced-motion via CSS)
+      const io = new IntersectionObserver(
+        (entries) => {
+          for (const e of entries) {
+            if (e.isIntersecting) {
+              e.target.classList.add("in");
+              io.unobserve(e.target);
+            }
+          }
+        },
+        { threshold: 0.12 }
+      );
+      document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    </script>
+  </body>
+</html>
