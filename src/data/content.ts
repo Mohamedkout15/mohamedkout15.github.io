@@ -118,7 +118,6 @@ export const projects = [
   },
 ];
 
-export const credlyProfile = "https://www.credly.com/earner/kout-mohamed";
 
 export const experience = [
   {
