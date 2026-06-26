@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "lang": "fr",
+    "label": "FR",
+    "htmlLang": "fr",
+    "htmlTitle": "Mohamed Kout \u2014 Ing\u00e9nieur Full-Stack",
+    "htmlDescription": "Ing\u00e9nieur full-stack (Java/Spring + Angular) et praticien DevSecOps bas\u00e9 \u00e0 Ariana, Tunisie. Je construis et op\u00e8re des plateformes web de production de bout en bout.",
+    "clockLocale": "fr-FR",
+    "dir": "ltr"
+  },
+  "statusBar": {
+    "user": "mkout",
+    "path": "~/portfolio",
+    "branch": "main",
+    "location": "Ariana, TN",
+    "available": "disponible"
+  },
+  "hero": {
+    "eyebrow": "$ qui suis-je",
+    "role": "ing\u00e9nieur full-stack \u00b7 java/spring + angular \u00b7 DevOps",
+    "summaryTitle": "mkout@portfolio \u2014 r\u00e9sum\u00e9",
+    "lede": "Je construis et op\u00e8re des plateformes web de production <strong>de bout en bout</strong> \u2014 des API Spring Boot et fronts Angular aux pipelines CI/CD et \u00e0 l'infrastructure VPS durcie qui les h\u00e9berge."
+  },
+  "cta": {
+    "viewProjects": "voir les projets",
+    "getInTouch": "me contacter",
+    "downloadCv": "t\u00e9l\u00e9charger le CV"
+  },
+  "about": {
+    "label": "\u00e0 propos",
+    "p1": "Je suis un ing\u00e9nieur full-stack bas\u00e9 \u00e0 Ariana, Tunisie, dipl\u00f4m\u00e9 de l'ESPRIT. Chez <strong>Sodalite Soft Solutions</strong>, je poss\u00e8de les fonctionnalit\u00e9s du sch\u00e9ma de base de donn\u00e9es jusqu'\u00e0 la config Nginx qui les sert.",
+    "p2": "Ma zone de confort est la partie que la plupart des d\u00e9veloppeurs d\u00e9l\u00e8guent : livrer le produit, puis le maintenir en vie en production. J'ai reconstruit des infrastructures compromises de z\u00e9ro, je les ai durcies et j'ai mis en place de la supervision \u2014 ce qui se refl\u00e8te dans ma mani\u00e8re de construire."
+  },
+  "sections": {
+    "stack": "stack --list",
+    "projects": "projects --all",
+    "certifications": "certifications --list",
+    "experience": "experience --log",
+    "contact": "contact --open"
+  },
+  "summary": [
+    { "k": "r\u00f4le", "v": "Ing\u00e9nieur Full-Stack @ Sodalite Soft Solutions" },
+    { "k": "stack principal", "v": "Spring Boot \u00b7 Angular \u00b7 PostgreSQL \u00b7 Docker", "hl": true },
+    { "k": "aussi", "v": "NestJS \u00b7 MERN \u00b7 AWS (freelance)" },
+    { "k": "formation", "v": "Dipl\u00f4me d'ing\u00e9nieur (Bac+5), ESPRIT" },
+    { "k": "localisation", "v": "Ariana, Tunisie \u00b7 ouvert au remote" }
+  ],
+  "stack": [
+    {
+      "title": "frontend",
+      "items": [
+        { "name": "Angular", "lvl": "expert" },
+        { "name": "TypeScript", "lvl": "expert" },
+        { "name": "React", "lvl": "avanc\u00e9" },
+        { "name": "Tailwind CSS", "lvl": "avanc\u00e9" },
+        { "name": "RxJS", "lvl": "avanc\u00e9" }
+      ]
+    },
+    {
+      "title": "backend",
+      "items": [
+        { "name": "Spring Boot", "lvl": "expert" },
+        { "name": "Java", "lvl": "expert" },
+        { "name": "PostgreSQL", "lvl": "avanc\u00e9" },
+        { "name": "NestJS / Node", "lvl": "avanc\u00e9" },
+        { "name": "REST / JWT", "lvl": "expert" }
+      ]
+    },
+    {
+      "title": "infra / DevOps",
+      "items": [
+        { "name": "Docker", "lvl": "expert" },
+        { "name": "GitLab CI / Jenkins", "lvl": "avanc\u00e9" },
+        { "name": "Nginx", "lvl": "avanc\u00e9" },
+        { "name": "Prometheus / Grafana", "lvl": "avanc\u00e9" },
+        { "name": "AWS", "lvl": "d\u00e9butant" }
+      ]
+    }
+  ],
+  "projects": {
+    "live": "\u25cf en ligne",
+    "items": [
+      {
+        "name": "Avis Loco",
+        "tag": "SaaS",
+        "live": false,
+        "blurb": "Plateforme de gestion de r\u00e9putation Google Business. Les propri\u00e9taires connectent leurs profils pour surveiller les avis, r\u00e9pondre et suivre les indicateurs de performance.",
+        "detail": "D\u00e9veloppement du backend Spring Boot autour de l'API Google Business Profile \u2014 rafra\u00eechissement de token OAuth 2.0, proxy d'avis, m\u00e9triques de performance et endpoints de r\u00e9ponse \u2014 avec cache Caffeine sur l'API Places et migrations Flyway (incluant une migration Java r\u00e9p\u00e9table pour la d\u00e9duplication de cat\u00e9gories). Front Angular, templates email JTE, flux complet de r\u00e9initialisation de mot de passe.",
+        "stack": ["Angular", "Spring Boot", "PostgreSQL", "Google API", "Flyway", "Docker"]
+      },
+      {
+        "name": "SuperMis",
+        "tag": "Production",
+        "live": true,
+        "blurb": "Application de gestion d'auto-\u00e9cole (app.supermis.fr) \u2014 planification, suivi des \u00e9l\u00e8ves, facturation et g\u00e9n\u00e9ration de documents.",
+        "detail": "Angular + Spring Boot + PostgreSQL avec un planificateur FullCalendar, g\u00e9n\u00e9ration de PDF pour factures et fiches d'\u00e9valuation, et pipeline GitLab CI/CD complet d\u00e9ploy\u00e9 sur VPS via des runners auto-h\u00e9berg\u00e9s.",
+        "stack": ["Angular 17", "Spring Boot 3", "PostgreSQL", "FullCalendar", "GitLab CI"]
+      },
+      {
+        "name": "Compta Pro",
+        "tag": "Demo",
+        "live": false,
+        "blurb": "Application de comptabilit\u00e9 compl\u00e8te con\u00e7ue comme d\u00e9monstration de capacit\u00e9 produit de bout en bout.",
+        "detail": "Front React sur backend Spring Boot \u2014 facturation, grands livres et rapports \u2014 utilis\u00e9 comme impl\u00e9mentation de r\u00e9f\u00e9rence pour une architecture propre et une interface soign\u00e9e.",
+        "stack": ["React", "Spring Boot", "PostgreSQL"]
+      },
+      {
+        "name": "AquaGuard E-shop",
+        "tag": "Mobile",
+        "live": false,
+        "blurb": "Plateforme e-commerce sociale avec syst\u00e8me de r\u00e9compenses \u00e9changeables.",
+        "detail": "D\u00e9veloppement d'une plateforme e-commerce sociale avec syst\u00e8me de r\u00e9compenses \u00e9changeables. D\u00e9veloppement de l'application mobile avec SwiftUI et Flutter.",
+        "stack": ["SwiftUI", "Flutter", "Node.js", "MongoDB"]
+      },
+      {
+        "name": "CrossChat SDK",
+        "tag": "SDK",
+        "live": false,
+        "blurb": "SDK de messagerie multiplateforme pour applications web et mobiles.",
+        "detail": "Cr\u00e9ation d'un SDK de messagerie multiplateforme pour applications web et mobiles. Authentification JWT. D\u00e9ploiement et h\u00e9bergement sur Azure.",
+        "stack": ["MEAN Stack", "Azure"]
+      },
+      {
+        "name": "Ticket Buyer",
+        "tag": "Web",
+        "live": false,
+        "blurb": "Application web de r\u00e9servation d'\u00e9v\u00e9nements en ligne.",
+        "detail": "D\u00e9veloppement d'une application web de r\u00e9servation d'\u00e9v\u00e9nements en ligne. Authentification AWS Cognito. Fonctions serverless AWS Lambda et DynamoDB pour la gestion des donn\u00e9es.",
+        "stack": ["Angular", "AWS Cognito", "AWS Lambda", "AWS S3", "AWS DynamoDB"]
+      }
+    ]
+  },
+  "experience": [
+    {
+      "when": "actuel",
+      "title": "Ing\u00e9nieur Full-Stack",
+      "at": "Sodalite Soft Solutions",
+      "body": "Conception, construction et exploitation de plateformes web de production de bout en bout \u2014 fronts Angular, API Spring Boot, PostgreSQL, et l'infrastructure CI/CD Dockeris\u00e9e et VPS qui les h\u00e9berge. Au quotidien : GitLab CI, Jenkins et Nginx."
+    },
+    {
+      "when": "en cours",
+      "title": "D\u00e9veloppeur Freelance",
+      "at": "ind\u00e9pendant",
+      "body": "Livraison de produits web et mobiles pour des clients sur le stack MERN, NestJS et AWS \u2014 du d\u00e9veloppement greenfield \u00e0 l'infrastructure et au d\u00e9ploiement."
+    }
+  ],
+  "contact": {
+    "text": "Ouvert aux postes \u00e0 plein temps et aux missions freelance. Le moyen le plus rapide de me joindre est l'email \u2014 je r\u00e9ponds sous un jour.",
+    "github": "github",
+    "linkedin": "linkedin"
+  },
+  "footer": {
+    "exit": "exit 0",
+    "credit": "construit avec Astro \u00b7 d\u00e9ploy\u00e9 sur VPS"
+  }
+}

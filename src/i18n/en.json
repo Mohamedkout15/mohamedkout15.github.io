@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "lang": "en",
+    "label": "EN",
+    "htmlLang": "en",
+    "htmlTitle": "Mohamed Kout — Full-Stack Engineer",
+    "htmlDescription": "Full-stack engineer (Java/Spring + Angular) and DevSecOps practitioner based in Ariana, Tunisia. I build and operate production web platforms end to end.",
+    "clockLocale": "en-GB",
+    "dir": "ltr"
+  },
+  "statusBar": {
+    "user": "mkout",
+    "path": "~/portfolio",
+    "branch": "main",
+    "location": "Ariana, TN",
+    "available": "available"
+  },
+  "hero": {
+    "eyebrow": "$ whoami",
+    "role": "full-stack engineer · java/spring + angular · DevOps",
+    "summaryTitle": "mkout@portfolio — summary",
+    "lede": "I build and operate production web platforms <strong>end to end</strong> — from Spring Boot APIs and Angular front ends to the CI/CD pipelines and hardened VPS infrastructure they run on."
+  },
+  "cta": {
+    "viewProjects": "view projects",
+    "getInTouch": "get in touch",
+    "downloadCv": "download CV"
+  },
+  "about": {
+    "label": "whoami",
+    "p1": "I'm a full-stack engineer based in Ariana, Tunisia, with an engineering degree from ESPRIT. At <strong>Sodalite Soft Solutions</strong> I own features from the database schema all the way to the Nginx config in front of them.",
+    "p2": "My comfort zone is the part most developers hand off: shipping the thing, then keeping it alive in production. I've rebuilt compromised infrastructure from scratch, hardened it, and put monitoring in front of it — which you'll see reflected in the way I build."
+  },
+  "sections": {
+    "stack": "stack --list",
+    "projects": "projects --all",
+    "certifications": "certifications --list",
+    "experience": "experience --log",
+    "contact": "contact --open"
+  },
+  "summary": [
+    { "k": "role", "v": "Full-Stack Engineer @ Sodalite Soft Solutions" },
+    { "k": "core stack", "v": "Spring Boot · Angular · PostgreSQL · Docker", "hl": true },
+    { "k": "also", "v": "NestJS · MERN · AWS (freelance)" },
+    { "k": "education", "v": "Engineering degree (Bac+5), ESPRIT" },
+    { "k": "location", "v": "Ariana, Tunisia · open to remote" }
+  ],
+  "stack": [
+    {
+      "title": "frontend",
+      "items": [
+        { "name": "Angular", "lvl": "expert" },
+        { "name": "TypeScript", "lvl": "expert" },
+        { "name": "React", "lvl": "strong" },
+        { "name": "Tailwind CSS", "lvl": "strong" },
+        { "name": "RxJS", "lvl": "strong" }
+      ]
+    },
+    {
+      "title": "backend",
+      "items": [
+        { "name": "Spring Boot", "lvl": "expert" },
+        { "name": "Java", "lvl": "expert" },
+        { "name": "PostgreSQL", "lvl": "strong" },
+        { "name": "NestJS / Node", "lvl": "strong" },
+        { "name": "REST / JWT", "lvl": "expert" }
+      ]
+    },
+    {
+      "title": "infra / DevOps",
+      "items": [
+        { "name": "Docker", "lvl": "expert" },
+        { "name": "GitLab CI / Jenkins", "lvl": "strong" },
+        { "name": "Nginx", "lvl": "strong" },
+        { "name": "Prometheus / Grafana", "lvl": "strong" },
+        { "name": "AWS", "lvl": "working" }
+      ]
+    }
+  ],
+  "projects": {
+    "live": "\u25cf live",
+    "items": [
+      {
+        "name": "Avis Loco",
+        "tag": "SaaS",
+        "live": false,
+        "blurb": "Google Business reputation management platform. Owners connect their profiles to monitor reviews, reply, and track performance metrics across locations.",
+        "detail": "Built the Spring Boot backend around the Google Business Profile API \u2014 OAuth 2.0 token refresh, a reviews proxy, performance metrics and reply endpoints \u2014 with Caffeine-backed caching on the Places API and Flyway migrations (including a repeatable Java migration for category deduplication). Angular front end, JTE email templates, full password-reset flow.",
+        "stack": ["Angular", "Spring Boot", "PostgreSQL", "Google API", "Flyway", "Docker"]
+      },
+      {
+        "name": "SuperMis",
+        "tag": "Production",
+        "live": true,
+        "blurb": "Driving-school management application (app.supermis.fr) \u2014 scheduling, student tracking, billing and document generation for French auto-\u00e9coles.",
+        "detail": "Angular + Spring Boot + PostgreSQL with a FullCalendar-based scheduler, PDF generation for invoices and student evaluation sheets, and a full GitLab CI/CD pipeline deploying to VPS infrastructure via self-hosted runners.",
+        "stack": ["Angular 17", "Spring Boot 3", "PostgreSQL", "FullCalendar", "GitLab CI"]
+      },
+      {
+        "name": "Compta Pro",
+        "tag": "Demo",
+        "live": false,
+        "blurb": "A full-featured accounting application built as a demonstration of end-to-end product capability.",
+        "detail": "React front end on a Spring Boot backend \u2014 invoicing, ledgers and reporting \u2014 used as a reference implementation for clean architecture and a polished UI.",
+        "stack": ["React", "Spring Boot", "PostgreSQL"]
+      },
+      {
+        "name": "AquaGuard E-shop",
+        "tag": "Mobile",
+        "live": false,
+        "blurb": "Social e-commerce platform with a redeemable rewards system.",
+        "detail": "Development of a social e-commerce platform with a redeemable rewards system. Mobile app built with SwiftUI and Flutter.",
+        "stack": ["SwiftUI", "Flutter", "Node.js", "MongoDB"]
+      },
+      {
+        "name": "CrossChat SDK",
+        "tag": "SDK",
+        "live": false,
+        "blurb": "Cross-platform messaging SDK for web and mobile applications.",
+        "detail": "Created a cross-platform messaging SDK for web and mobile applications. JWT-based authentication. Deployed and hosted on Azure.",
+        "stack": ["MEAN Stack", "Azure"]
+      },
+      {
+        "name": "Ticket Buyer",
+        "tag": "Web",
+        "live": false,
+        "blurb": "Online event reservation web application.",
+        "detail": "Developed an online event reservation web application. Authentication implemented with AWS Cognito. AWS Lambda for serverless functions and DynamoDB for data management.",
+        "stack": ["Angular", "AWS Cognito", "AWS Lambda", "AWS S3", "AWS DynamoDB"]
+      }
+    ]
+  },
+  "experience": [
+    {
+      "when": "now",
+      "title": "Full-Stack Engineer",
+      "at": "Sodalite Soft Solutions",
+      "body": "Designing, building and operating production web platforms end to end \u2014 Angular front ends, Spring Boot APIs, PostgreSQL, and the Dockerized CI/CD and VPS infrastructure they run on. Day-to-day across GitLab CI, Jenkins and Nginx."
+    },
+    {
+      "when": "ongoing",
+      "title": "Freelance Developer",
+      "at": "self-employed",
+      "body": "Shipping web and mobile products for clients on the MERN stack, NestJS and AWS \u2014 from greenfield builds to infrastructure and deployment."
+    }
+  ],
+  "contact": {
+    "text": "Open to full-time roles and freelance work. The fastest way to reach me is email \u2014 I reply within a day.",
+    "github": "github",
+    "linkedin": "linkedin"
+  },
+  "footer": {
+    "exit": "exit 0",
+    "credit": "built with Astro \u00b7 deployed on VPS"
+  }
+}

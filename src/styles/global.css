@@ -136,6 +136,19 @@ img { max-width: 100%; display: block; }
   background: var(--green);
   box-shadow: 0 0 6px var(--green);
 }
+.sl-langs { display: flex; align-items: center; gap: 0.4rem; }
+.sl-lang {
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+  font-size: 1rem;
+  padding: 1px 4px;
+  border-radius: 2px;
+  color: var(--text-mute);
+  text-decoration: none;
+  transition: color .15s, background .15s;
+  line-height: 1;
+}
+.sl-lang:hover { color: var(--amber-hi); }
+.sl-lang.active { color: var(--amber); background: var(--surface-2); }
 .sl-loc, .sl-clock { color: var(--text-dim); }
 @media (max-width: 680px) {
   .sl-loc, .sl-branch { display: none; }

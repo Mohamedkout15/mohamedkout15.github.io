@@ -1,18 +1,22 @@
 ---
+import { supportedLangs, langLabels, langFlags } from "../i18n";
+import type { Lang, Translations } from "../i18n";
+
 export interface Props {
   title?: string;
   description?: string;
+  lang: Lang;
+  translations: Translations;
 }
-const {
-  title = "Mohamed Kout — Full-Stack Engineer",
-  description = "Full-stack engineer (Java/Spring + Angular) and DevSecOps practitioner based in Ariana, Tunisia. I build and operate production web platforms end to end.",
-} = Astro.props;
+const { lang, translations: t } = Astro.props;
+const title = Astro.props.title ?? t.meta.htmlTitle;
+const description = Astro.props.description ?? t.meta.htmlDescription;
 
 import "../styles/global.css";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={t.meta.htmlLang} dir={t.meta.dir}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -39,13 +43,22 @@ import "../styles/global.css";
     <!-- status line: reads like a tmux / neovim status bar -->
     <header class="statusline">
       <div class="wrap">
-        <span class="sl-seg"><span class="sl-prompt">mkout</span></span>
-        <span class="sl-seg sl-path">~/portfolio</span>
-        <span class="sl-seg sl-branch"> main</span>
+        <span class="sl-seg"><span class="sl-prompt">{t.statusBar.user}</span></span>
+        <span class="sl-seg sl-path">{t.statusBar.path}</span>
+        <span class="sl-seg sl-branch"> {t.statusBar.branch}</span>
+        <span class="sl-seg sl-langs">
+          {supportedLangs.map((l) => (
+            <a
+              href={l === "en" ? "/" : `/${l}/`}
+              class={`sl-lang${l === lang ? " active" : ""}`}
+              title={langLabels[l]}
+            >{langFlags[l]}</a>
+          ))}
+        </span>
         <span class="sl-spacer"></span>
-        <span class="sl-seg sl-loc">Ariana, TN</span>
+        <span class="sl-seg sl-loc">{t.statusBar.location}</span>
         <span class="sl-seg sl-clock" id="clock">--:--</span>
-        <span class="sl-seg sl-status"><span class="dot"></span> available</span>
+        <span class="sl-seg sl-status"><span class="dot"></span> {t.statusBar.available}</span>
       </div>
     </header>
 

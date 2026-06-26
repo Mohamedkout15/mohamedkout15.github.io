@@ -1,9 +1,18 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import { getTranslations } from "../i18n";
-import { profile } from "../data/content";
+import Layout from "../../layouts/Layout.astro";
+import { getTranslations, supportedLangs, langLabels } from "../../i18n";
+import { profile } from "../../data/content";
+import type { Lang } from "../../i18n";
 
-const t = getTranslations("en");
+export async function getStaticPaths() {
+  return supportedLangs.map((lang) => ({
+    params: { lang },
+  }));
+}
+
+const { lang } = Astro.params as { lang: Lang };
+const t = getTranslations(lang);
+const currentLang = lang;
 
 const credlyBadges = await fetch("https://www.credly.com/users/kout-mohamed/badges.json")
   .then((r) => r.json())
@@ -11,7 +20,7 @@ const credlyBadges = await fetch("https://www.credly.com/users/kout-mohamed/badg
   .catch(() => []);
 ---
 
-<Layout lang="en" translations={t}>
+<Layout lang={currentLang} translations={t}>
   <!-- ============================================================ HERO -->
   <section class="hero">
     <div class="wrap">
