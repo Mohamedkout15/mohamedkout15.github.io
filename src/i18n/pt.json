@@ -73,7 +73,7 @@
         { "name": "GitLab CI / Jenkins", "lvl": "forte" },
         { "name": "Nginx", "lvl": "forte" },
         { "name": "Prometheus / Grafana", "lvl": "forte" },
-        { "name": "AWS", "lvl": "aprendiz" }
+        { "name": "AWS", "lvl": "básico" }
       ]
     }
   ],
@@ -145,7 +145,7 @@
     }
   ],
   "contact": {
-    "text": "Aberto a vagas em tempo integral e trabalhos freelance. A maneira mais r\u00e1pida de me contactar \u00e9 por email \u2014 respondo em at\u00e9 um dia.",
+    "text": "Aberto a vagas em tempo integral e trabalhos freelance. A maneira mais r\u00e1pida de me contatar \u00e9 por email \u2014 respondo em at\u00e9 um dia.",
     "github": "github",
     "linkedin": "linkedin"
   },

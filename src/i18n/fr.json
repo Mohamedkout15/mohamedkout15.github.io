@@ -28,7 +28,7 @@
   },
   "about": {
     "label": "\u00e0 propos",
-    "p1": "Je suis un ing\u00e9nieur full-stack bas\u00e9 \u00e0 Ariana, Tunisie, dipl\u00f4m\u00e9 de l'ESPRIT. Chez <strong>Sodalite Soft Solutions</strong>, je poss\u00e8de les fonctionnalit\u00e9s du sch\u00e9ma de base de donn\u00e9es jusqu'\u00e0 la config Nginx qui les sert.",
+    "p1": "Je suis un ing\u00e9nieur full-stack bas\u00e9 \u00e0 Ariana, Tunisie, dipl\u00f4m\u00e9 de l'ESPRIT. Chez <strong>Sodalite Soft Solutions</strong>, je g\u00e8re les fonctionnalit\u00e9s du sch\u00e9ma de base de donn\u00e9es jusqu'\u00e0 la config Nginx qui les sert.",
     "p2": "Ma zone de confort est la partie que la plupart des d\u00e9veloppeurs d\u00e9l\u00e8guent : livrer le produit, puis le maintenir en vie en production. J'ai reconstruit des infrastructures compromises de z\u00e9ro, je les ai durcies et j'ai mis en place de la supervision \u2014 ce qui se refl\u00e8te dans ma mani\u00e8re de construire."
   },
   "sections": {
@@ -73,7 +73,7 @@
         { "name": "GitLab CI / Jenkins", "lvl": "avanc\u00e9" },
         { "name": "Nginx", "lvl": "avanc\u00e9" },
         { "name": "Prometheus / Grafana", "lvl": "avanc\u00e9" },
-        { "name": "AWS", "lvl": "d\u00e9butant" }
+        { "name": "AWS", "lvl": "de base" }
       ]
     }
   ],

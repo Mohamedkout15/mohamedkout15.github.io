@@ -28,8 +28,8 @@
   },
   "about": {
     "label": "qui\u00e9n soy",
-    "p1": "Soy ingeniero full-stack con sede en Ariana, T\u00fanez, titulado en ingenier\u00eda por ESPRIT. En <strong>Sodalite Soft Solutions</strong> poseo las funcionalidades desde el esquema de base de datos hasta la configuraci\u00f3n de Nginx.",
-    "p2": "Mi zona de confort es la parte que la mayor\u00eda de desarrolladores delega: entregar el producto y mantenerlo vivo en producci\u00f3n. He reconstruido infraestructuras comprometidas desde cero, las he protegido y he puesto monitoreo al frente \u2014 lo que se refleja en mi forma de construir."
+    "p1": "Soy ingeniero full-stack con sede en Ariana, T\u00fanez, titulado en ingenier\u00eda por ESPRIT. En <strong>Sodalite Soft Solutions</strong> gestiono las funcionalidades desde el esquema de base de datos hasta la configuraci\u00f3n de Nginx.",
+    "p2": "Mi zona de confort es la parte que la mayor\u00eda de los desarrolladores delega: entregar el producto y mantenerlo vivo en producci\u00f3n. He reconstruido infraestructuras comprometidas desde cero, las he protegido y he puesto monitoreo al frente \u2014 lo que se refleja en mi forma de construir."
   },
   "sections": {
     "stack": "stack --list",
@@ -73,7 +73,7 @@
         { "name": "GitLab CI / Jenkins", "lvl": "fuerte" },
         { "name": "Nginx", "lvl": "fuerte" },
         { "name": "Prometheus / Grafana", "lvl": "fuerte" },
-        { "name": "AWS", "lvl": "principiante" }
+        { "name": "AWS", "lvl": "básico" }
       ]
     }
   ],
